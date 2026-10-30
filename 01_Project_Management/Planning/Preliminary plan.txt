@@ -1,0 +1,56 @@
+## Purpose and outcomes
+
+Run an EBIOS-RM analysis of the supply-chain case, including relevant AI use and workflows. Produce outputs from the five workshops, consolidate them into a risk-analysis report, then update/reduce the Information System Security Policy (ISSP) and Business Continuity Plan (BCP). The team agreed to focus on the most important parts of the case rather than attempt to cover everything.## Overall planning basis
+
+- **Indicative duration:** approximately four months, as discussed in the meeting. This is a planning estimate, not a confirmed baseline.
+- **Workflow:** preparation → Workshops 1–5 → consolidated report and validation → ISSP/BCP updates → final review and submission.
+- **Workshop order:**
+    1. Framing and security base
+    2. Sources of risk
+    3. Strategic scenarios
+    4. Operational scenarios
+    5. Risk treatment
+- Exact dates for Workshops 2–5 and later deliverables were not set. Confirm them after Workshop 1 and record them in the project schedule. 
+## Agreed work structure
+
+| Phase | Main work | Output / gate |
+| --- | --- | --- |
+| Project setup | Confirm scope, roles, schedule, meeting reports, repository access, and working rules | Shared project plan and team organization |
+| Preparation | Share case-study material; prepare workshop breakdown, checklist, report structure, and inventory/classification tables | Ready-to-use Workshop 1 materials |
+| Workshop 1 | Present the organization/use case and architecture; define perimeter and business values; inventory assets; define/apply CIA classification; identify feared events | Agreed scope, asset inventory/classification, and Workshop 1 record |
+| Workshops 2–5 | Continue the EBIOS-RM workflow using validated outputs from the preceding workshops; define tasks, owners, and expected outputs for each workshop | Four workshop records and reviewed outputs |
+| Consolidation and validation | Consolidate workshop outputs into a traceable risk-analysis report; team review and validation before submission | Validated report and version history |
+| Final documentation | Use workshop results to update/reduce the ISSP and BCP; perform final quality review | Updated/reduced ISSP and BCP |
+
+The meeting emphasized that Workshop 1 scope and inventory come before classification, followed by feared events. Workshop 1 is a prerequisite for Workshop 2, so its results should be reviewed before Workshop 2 staffing is finalized.## Immediate plan: Workshop 1
+
+1. Share the professor’s case-study materials and agree the study perimeter.
+2. Prepare the organization/use-case introduction and system architecture overview.
+3. Draft the business-value and supporting-asset inventories, distinguishing essential and supporting assets.
+4. Define the CIA classification criteria and apply them to in-scope assets.
+5. Identify feared events after the scope, inventory, and classifications are established.
+6. Record decisions and unresolved assumptions; push the draft to GitHub for review.
+7. Review Workshop 1 outputs at the next meeting and use them to decide Workshop 2 staffing.
+
+The meeting targeted a Workshop 1 group of roughly 3–4 contributors; Raouf and Wassim were already involved. The draft was to be completed by Thursday, but the exact deadline and complete contributor list should be confirmed. ## Milestones and cadence
+
+| Milestone | Target / timing | Notes |
+| --- | --- | --- |
+| Confirm repository access and share preparation materials | Immediately | GitHub invitation acceptance is still an action item |
+| Workshop 1 draft ready for team review | Thursday; exact date to confirm | Keep the work in GitHub and retain review history |
+| Review Workshop 1 and assign Workshop 2 team | Next coordination meeting | The discussion referenced 5 November for a follow-up; reconfirm |
+| Workshops 2–5 | Dates to be scheduled | Set dates and owners after Workshop 1 review |
+| Consolidated report, ISSP and BCP review | After the five workshops | Final-document work follows workshop outputs |
+| Project completion | Approximately four months overall | Indicative estimate; revise after detailed scheduling |
+
+A fixed Friday meeting was discussed, with additional meetings as needed. Routine updates can be handled asynchronously by email or group chat.
+## Documentation and review rules
+
+- GitHub is the proposed shared repository for drafts and version history.
+- Use branches and review changes before merging; avoid force-pushes or overwriting other contributors’ work.
+- Use the shared report template, with the more organized structure from the previous year as a proposed reference.
+- Workshop outputs should be reviewed and validated before they are incorporated into the final report.
+- Track exclusions and assumptions so the supply-chain scope remains manageable.
+
+
+c141?pvs=21)
