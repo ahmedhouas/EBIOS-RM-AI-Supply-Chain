@@ -1,0 +1,99 @@
+## Meeting details
+
+- **Date:** 30 October 2026
+- **Purpose:** Align the project team on the risk-analysis project plan, its deliverables, organization, and the first workshop’s preparation.
+- **Case study:** A supply-chain scenario, including relevant AI use and workflows; the team agreed to keep the analysis focused on the most important elements rather than attempt to cover everything.
+
+
+
+## Executive summary
+
+The team aligned on a five-workshop EBIOS-RM project producing a risk-analysis report, followed by updates/reduction of the Information System Security Policy (ISSP) and Business Continuity Plan (BCP). The overall schedule discussed was approximately four months. Workshop 1 is the immediate priority because it defines the study scope, asset inventory, and security baseline needed by later work. The team agreed to start with a small, focused group of roughly 3–4 contributors for Workshop 1 and decide Workshop 2 staffing after reviewing Workshop 1 results. Several role assignments and exact later deadlines remain provisional.
+
+
+
+## Decisions and alignment
+
+- **Project outputs:** Workshop outputs feed a consolidated risk-analysis report; the ISSP and BCP are updated after the workshops.
+- **Project organization:** Maintain project planning, team organization, and meeting reports alongside preparation materials, workshop outputs, drafts/reviews, and final deliverables.
+- **Workshop 1 sequence:** Introduce the organization/use case and system architecture; define the study scope and inventories; define CIA classification criteria and classify assets; then identify feared events. This resolves the discussion about whether scope or classification should come first: scope and inventory precede classification, followed by feared events.
+- **Workshop staffing:** Workshop 1 receives about 3–4 contributors because of its workload and its importance to Workshop 2. Workshop 2 staffing will be decided after the Workshop 1 results are reviewed. A broader proposal was for contributors to participate in more than one workshop, with the exact distribution still to be finalized.
+- **Documentation platform:** GitHub is the current proposal for versioned project documents. Use individual branches and careful commits; avoid force-pushing or overwriting others’ work.
+- **Meeting cadence:** Keep a fixed Friday meeting and arrange additional discussions only as needed; use email or group chat for routine coordination where a meeting is unnecessary.
+
+
+
+## Project scope and deliverable structure
+
+The case is a supply chain with AI and workflows in scope. The project should focus on the critical parts of the case study. The intended deliverables are:
+
+1. EBIOS-RM outputs from five workshops.
+2. A consolidated risk-analysis report, reviewed and validated before submission to the professor.
+3. Updated/reduced ISSP.
+4. Updated/reduced BCP.
+
+The report is expected to follow a shared template, with the more organized structure from the previous year proposed as a reference. Drafts should be reviewed and validated, with version history retained in GitHub. Final ISSP and BCP work follows the workshops.
+
+
+
+## Workshop 1 — agreed preparation focus
+
+**Purpose:** Establish the scope and security baseline for the supply-chain case.
+
+**Core work discussed:**
+
+- Present the organization, case study/use case, and system architecture.
+- Define the study perimeter and business values.
+- Inventory supporting assets and distinguish essential from supporting assets.
+- Define the CIA classification criteria and apply them to the in-scope assets.
+- Identify feared events after scope, inventory, and classification are established.
+
+**Preparation materials:** Case-study documents supplied by the professor, a workshop checklist, draft inventory/classification tables, and the proposed report structure. The coordinator and editors should share preparation materials, case documents, and the workshop breakdown with the team.
+
+**Working arrangement:** Raouf and Wassim were already identified as Workshop 1 contributors; additional contributors were discussed, with a target group of approximately 3–4. The Workshop 1 draft was to be completed by Thursday and pushed to GitHub for team review. Confirm the exact owner list and deadline in the next coordination check-in.
+
+
+
+## Roles and coordination
+
+- **Coordinator:** Ahmed was proposed provisionally; the role carries project-wide coordination and follow-up.
+- **Editors/reductors:** Two people are expected to consolidate workshop outputs and support the report’s final drafting. Their final names and division of work were not settled in the discussion.
+- **Workshop contributors:** Produce workshop content, review it, and validate it with the team.
+- **Workshop 1 contributors:** Raouf and Wassim were named as already involved; additional staffing remains to be confirmed.
+
+
+
+## Action register
+
+| Action | Owner | Due / timing | Status |
+| --- | --- | --- | --- |
+| Share GitHub account emails so repository invitations can be sent | Team members | As soon as possible | Completed |
+| Accept the GitHub invitation by email; check spam if it is missing | Invitees | As soon as invitation arrives | Open |
+| Share the case-study preparation material, tables/classifications, and workshop breakdown | Coordinator and editors | Before Workshop 1 work advances | Open |
+| Begin Workshop 1 document and table work with a 3–4-person group | Workshop 1 contributors (Raouf and Wassim already involved) | Immediately | Open |
+| Complete the Workshop 1 draft and push it to GitHub for review | Workshop 1 contributors | Thursday; confirm exact date | Open |
+| Review Workshop 1 results and assign the Workshop 2 team | Full team / coordinator | Next meeting | Open |
+| Confirm coordinator and editor assignments and the remaining workshop staffing | Team | Next coordination meeting | Open |
+| Share the report template/previous-year structure | Coordinator or project lead | During preparation | Open |
+
+
+
+## Open questions and follow-up
+
+- Confirm final coordinator and editor names, and clarify the editors’ continuing role during workshop drafting versus final consolidation.
+- Confirm the Workshop 1 contributors, the exact Thursday deadline, and the next meeting date; the discussion referenced 5 November for a follow-up, but this should be reconfirmed.
+- Decide Workshop 2–5 staffing and exact deadlines after Workshop 1 results are available.
+- Share the final workshop-by-workshop task breakdown, expected outputs, and report template in the project workspace.
+- Establish simple GitHub collaboration rules (branches, review before merge, and no force-pushes) to protect team contributions.
+
+
+
+## Delivery risks noted
+
+- **Unclear ownership and staffing:** Final roles and later workshop assignments are unresolved. Confirm them at the next meeting and record owners in the project plan.
+- **Workshop 1 dependency:** Later analysis relies heavily on its scope and asset inventory. Protect capacity for this workshop and review its outputs before locking Workshop 2 staffing.
+- **Coordination and version-control errors:** GitHub changes could overwrite work. Use branches, reviewed changes, and clear commit practices.
+- **Availability:** Not all members may attend each meeting. Keep written decisions and use asynchronous updates for routine coordination.
+- **Scope overload:** The supply-chain case includes multiple layers, AI, and workflows. Prioritize critical assets and processes and document exclusions.
+
+[[1]](https://app.notion.com/p/Risk-analysis-project-meeting-409fa1201d448056904be6b00cc7c141?pvs=21)
