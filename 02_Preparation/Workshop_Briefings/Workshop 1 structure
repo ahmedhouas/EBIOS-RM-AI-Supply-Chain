@@ -1,0 +1,10 @@
+|_Define the study framework
+|_Define the study scope
+  |_stategic scope
+  |_operational scope
+|_Define CIA classes
+|_Define the business and technical perimeter
+  |_primary assets
+  |_supporting assets
+|_Identify feared events
+|_Determine the security foundation
