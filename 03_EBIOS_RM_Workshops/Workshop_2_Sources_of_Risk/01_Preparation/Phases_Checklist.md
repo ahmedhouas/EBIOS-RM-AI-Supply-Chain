@@ -4,10 +4,10 @@
 
 ## Phase 1: Preparation
 
-- [ ] Preparation checklist reviewed (`Preparation_Notes.md`)
-- [ ] Participants and roles defined (`Participant_List.md`)
-- [ ] Agenda written (`Agenda.md`)
-- [ ] Files committed to `01_Preparation`
+-  ✓  Preparation checklist reviewed (`Preparation_Notes.md`)
+-  ✓ Participants and roles defined (`Participant_List.md`)
+-  ✓ Agenda written (`Agenda.md`)
+-  ✓ Files committed to `01_Preparation`
 
 ## Phase 2: Gather Inputs
 
