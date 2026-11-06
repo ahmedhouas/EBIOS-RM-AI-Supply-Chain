@@ -110,23 +110,23 @@ Essential Assets are the processes and information whose compromise could seriou
  
 ### 3.2 Supporting Assets
  
-Supporting Assets are the elements on which Essential Assets depend. The project inventory identifies the following supporting-asset categories.
+Supporting Assets are the elements on which Essential Assets depend; they are what attacks target. The project inventory identifies the following supporting assets and the Essential Assets each one supports.
  
-| Supporting Asset | Role in the system |
-|---|---|
-| ERP, WMS, TMS and inventory system | Support planning, procurement, finance, warehouse operations, routing, carrier management, and stock information. |
-| Sales platform and order API | Receive customer orders and transmit them to operational systems. |
-| Integration service (ETL/ELT, APIs) | Receives and validates records, standardizes units and dates, matches identifiers, and flags data-quality issues. |
-| Operational database and data warehouse (data lake) | Store current operational information and historical records used for analytics and model training. |
-| AI services | Provide demand forecasting, inventory recommendations, anomaly detection, supplier-risk estimation, and delivery-time prediction. |
-| Model registry and training pipeline | Record model versions and evaluation information and support training, validation, monitoring, retraining, and rollback. |
-| Dashboards and logging system | Present role-specific recommendations and alerts and record user activity, approvals, and overrides. |
-| IoT sensors, barcode scanners, warehouse terminals | Collect stock movement, location, and delivery-related information through devices used in warehouses and shipping operations. |
-| Server, cloud and network infrastructure | Host and connect the applications, databases, and models. |
-| Privileged users | Users with extended access to data, models, administration, or approval functions. |
-| Suppliers, carriers and external sources | Provide supplier, carrier, shipment-tracking, and approved external information used by the system. |
+| Supporting Asset | Description | Supports |
+|---|---|---|
+| ERP, WMS, TMS and inventory system | Core business applications: the ERP for planning, procurement and finance; the WMS for warehouse operations such as put-away and picking; the TMS for routing and carrier management; and the inventory system for on-hand, in-transit and inbound stock. | BE1, BE2, BE3, BE6 |
+| Sales platform and order API | The platform through which customer orders are received and the API that transmits them to the operational systems. It is the main entry point of customer data. | BE3, BE4, BE6 |
+| Integration service (ETL/ELT, APIs) | Receives and validates records, checks required fields, standardizes units and dates, matches product and supplier identifiers, and flags duplicates, missing values and implausible quantities before the data is used by the models. | BE1, BE2, BE4, BE5, BE6, BE7 |
+| Operational database and data warehouse (data lake) | The operational database holds current orders and stock. The historical data store retains approved records for analytics and model training, with data lineage so that model inputs can be traced to their source. | BE1, BE2, BE4, BE5, BE6, BE7, BE8 |
+| AI services | Separate services for demand forecasting, inventory recommendations, anomaly detection, supplier risk estimation and delivery-time prediction, running in the live environment on new data. | BE1, BE2, BE4, BE5 |
+| Model registry and training pipeline | Records model versions, evaluation results, owners, approval status and deployment dates. Supports controlled training, validation, monitoring for drift, retraining and rollback to a validated version. | BE1, BE2, BE4, BE5, BE7 |
+| Dashboards and logging system | Role-specific dashboards (warehouse, procurement, logistics, management) that present recommendations and alerts, and the logs that record user activity, approvals and overrides. | BE2, BE3, BE4, BE5, BE8 |
+| IoT sensors, barcode scanners, warehouse terminals | Devices on shipping containers and in warehouses (sensors, RFID, GPS, barcode scanners) that report stock movements, locations and delivery events in real time. | BE2, BE3, BE4, BE5, BE6 |
+| Server, cloud and network infrastructure | Servers, cloud hosting, storage and network links that run all applications, databases and models, and connect the organization to its partners. | BE1 to BE8 (all) |
+| Privileged users | Administrators, data scientists, data owners and procurement staff with extended access rights to data, models and approval functions. | BE2, BE6, BE7, BE8 |
+| Suppliers, carriers and external sources | Supplier portals and the tracking systems of contracted carriers, plus external feeds such as market trends, weather and public holidays that provide inputs to the system. | BE1, BE3, BE5, BE6 |
  
-The supporting-asset list includes technical systems, devices, users, and external organizations. The inventory describes the categories and their roles; detailed dependency mapping is not included in this report.
+The supporting-asset list includes technical systems, devices, users, and external organizations.
  
 ---
  
@@ -234,3 +234,4 @@ The security baseline below lists the reference measures that apply to the AI-SC
 | ISO 27002, ISO 27090 (5.3) | Role-based access, least privilege, approval of high-impact actions |
  
 ---
+ 
