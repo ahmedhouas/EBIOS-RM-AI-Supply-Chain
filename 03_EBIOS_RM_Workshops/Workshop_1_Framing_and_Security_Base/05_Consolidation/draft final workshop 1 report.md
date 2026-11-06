@@ -1,3 +1,17 @@
+Claude
+
+
+
+
+
+
+
+
+
+
+
+
+03 draft final workshop 1 report · MD
 # EBIOS Risk Manager – Workshop 1 Report
 ## AI-Enabled Supply Chain Management Information System (AI-SCMIS)
  
@@ -87,7 +101,7 @@ The project defines the following security classes. A higher number represents a
 | D3 | High | Interruptions are tolerated only for a short time. |
 | D4 | Critical | The service should be available almost continuously; interruption has a major impact. |
  
-The class definitions above reproduce the project's classification scale. This report does not assign a class to each Essential Asset because the reviewed asset inventory does not contain those assignments. The project-specific classification recommendations are being handled separately.
+The class definitions above reproduce the project's classification scale. The class assigned to each Essential Asset is given in section 3.1.
  
 ---
  
@@ -95,38 +109,38 @@ The class definitions above reproduce the project's classification scale. This r
  
 ### 3.1 Essential Assets
  
-Essential Assets are the processes and information whose compromise could seriously harm the organization. The project inventory identifies eight Essential Assets.
+Essential assets are the processes and information whose loss or compromise would seriously harm the organization.
  
-| ID | Essential Asset | Type | Description |
-|---|---|---|---|
-| BE1 | Demand forecasting | Process | Machine-learning models estimate future demand for products and warehouses using historical sales, seasonality, promotions, lead times, and calendar effects. The forecasts support downstream replenishment decisions. |
-| BE2 | Replenishment and inventory management | Process | Determines what quantity to order and when, using forecasts, current stock, goods already on order, supplier lead times, safety-stock requirements, storage capacity, and budget constraints. Large or exceptional orders require human approval. |
-| BE3 | Order and delivery management | Process | Covers customer-order reception, warehouse picking, dispatch, delivery through contracted carriers, shipment tracking, and customer/service-centre notifications. |
-| BE4 | Anomaly Detection and Fraud Indicators | Process | Identifies unusual patterns such as abnormal order quantities, unexpected stock reductions, repeated order changes, or duplicate invoices. An alert is an indicator for investigation, not proof of fraud; authorized staff verify it. |
-| BE5 | Supplier and delivery risk assessment | Process | Estimates supplier-delay and late-delivery risks using historical lead times, shipment events, and supplier performance, and supports consideration of alternatives. |
-| BE6 | Business and historical data | Information | Includes orders, point-of-sale history, product catalogues, stock levels, warehouse receipts, purchase orders, supplier lead times, carrier tracking events, and approved external indicators. It also includes limited personal data needed for fulfilment and customer service. |
-| BE7 | AI models and training data | Information | Includes trained forecasting, optimization, anomaly-detection, and supplier-risk models; their versions, evaluation results, and approval status; and the datasets used to train them. |
-| BE8 | Decision traceability and auditability | Information | Includes records of user activity, recommendation details, model version and input data, approvals, overrides and their reasons, and resulting actions, enabling decisions to be traced and reviewed. |
+C: C1 Public, C2 Secret, C3 Confidential. I: I1 Normal, I2 Intact. D: D1 Normal, D2 Moderate, D3 High, D4 Critical.
+ 
+| Ref. | Essential asset | Type | Description | Owner | C | I | D |
+|---|---|---|---|---|---|---|---|
+| EA1 | Demand forecasting | Process | Machine learning models estimate future demand for each product and warehouse over a planning horizon, using historical sales, seasonality, promotions, lead times and calendar effects. It replaces manual, static estimation and drives all downstream replenishment decisions. | Planning manager | C2 | I2 | D3 |
+| EA2 | Replenishment and inventory management | Process | Calculates what quantity to order and when, by combining the demand forecast with current stock, goods already on order, supplier lead times, safety stock, storage capacity and budget constraints. Large or exceptional orders require human approval. | Procurement manager | C2 | I2 | D4 |
+| EA3 | Order and delivery management | Process | Covers the full path from the reception of a customer order to warehouse picking, dispatch and delivery through contracted carriers, including shipment tracking and notifications to customers and service centres. | Logistics manager | C3 | I2 | D4 |
+| EA4 | 	Anomaly Detection and Fraud Indicators | Process | 	Identifies unusual patterns such as abnormal order quantities, unexpected stock reductions, repeated order changes, or duplicate invoices. An alert is an indicator for investigation, not proof of fraud; authorized staff verify it. | Control manager | C2 | I2 | D3 |
+| EA5 | Supplier and delivery risk assessment | Process | Estimates the probability of supplier delay or late delivery from historical lead times, shipment events and supplier performance, and proposes alternatives such as contacting the supplier, reserving alternative stock or comparing approved carriers. | Purchasing manager | C2 | I1 | D2 |
+| EA6 | Business and historical data | Information | Orders, point-of-sale history, product catalogues, stock levels, warehouse receipts, purchase orders, supplier lead times, carrier tracking events and approved external indicators (weather, holidays). Includes the limited personal data needed for fulfilment and customer service. | Data owners | C3 | I2 | D3 |
+| EA7 | AI models and training data | Information | The trained models (forecasting, optimization, anomaly detection, supplier risk), their versions, evaluation results and approval status, and the datasets used to train them. They are the intellectual property of the organization and the basis of every AI recommendation. | Data / AI manager | C3 | I2 | D3 |
+| EA8 | Decision traceability and auditability | Information | Logs of user activity, recommendation details, the model version and input data behind each recommendation, approvals, overrides with their reasons and the resulting actions, so that every decision can be traced and audited. | CISO / governance | C2 | I2 | D2 |
  
 ### 3.2 Supporting Assets
  
-Supporting Assets are the elements on which Essential Assets depend; they are what attacks target. The project inventory identifies the following supporting assets and the Essential Assets each one supports.
+Supporting assets are the elements on which the essential assets rely: they are what attacks target.
  
-| Supporting Asset | Description | Supports |
+| Supporting asset | Description | Supports |
 |---|---|---|
-| ERP, WMS, TMS and inventory system | Core business applications: the ERP for planning, procurement and finance; the WMS for warehouse operations such as put-away and picking; the TMS for routing and carrier management; and the inventory system for on-hand, in-transit and inbound stock. | BE1, BE2, BE3, BE6 |
-| Sales platform and order API | The platform through which customer orders are received and the API that transmits them to the operational systems. It is the main entry point of customer data. | BE3, BE4, BE6 |
-| Integration service (ETL/ELT, APIs) | Receives and validates records, checks required fields, standardizes units and dates, matches product and supplier identifiers, and flags duplicates, missing values and implausible quantities before the data is used by the models. | BE1, BE2, BE4, BE5, BE6, BE7 |
-| Operational database and data warehouse (data lake) | The operational database holds current orders and stock. The historical data store retains approved records for analytics and model training, with data lineage so that model inputs can be traced to their source. | BE1, BE2, BE4, BE5, BE6, BE7, BE8 |
-| AI services | Separate services for demand forecasting, inventory recommendations, anomaly detection, supplier risk estimation and delivery-time prediction, running in the live environment on new data. | BE1, BE2, BE4, BE5 |
-| Model registry and training pipeline | Records model versions, evaluation results, owners, approval status and deployment dates. Supports controlled training, validation, monitoring for drift, retraining and rollback to a validated version. | BE1, BE2, BE4, BE5, BE7 |
-| Dashboards and logging system | Role-specific dashboards (warehouse, procurement, logistics, management) that present recommendations and alerts, and the logs that record user activity, approvals and overrides. | BE2, BE3, BE4, BE5, BE8 |
-| IoT sensors, barcode scanners, warehouse terminals | Devices on shipping containers and in warehouses (sensors, RFID, GPS, barcode scanners) that report stock movements, locations and delivery events in real time. | BE2, BE3, BE4, BE5, BE6 |
-| Server, cloud and network infrastructure | Servers, cloud hosting, storage and network links that run all applications, databases and models, and connect the organization to its partners. | BE1 to BE8 (all) |
-| Privileged users | Administrators, data scientists, data owners and procurement staff with extended access rights to data, models and approval functions. | BE2, BE6, BE7, BE8 |
-| Suppliers, carriers and external sources | Supplier portals and the tracking systems of contracted carriers, plus external feeds such as market trends, weather and public holidays that provide inputs to the system. | BE1, BE3, BE5, BE6 |
- 
-The supporting-asset list includes technical systems, devices, users, and external organizations.
+| ERP, WMS, TMS and inventory system | Core business applications: the ERP for planning, procurement and finance; the WMS for warehouse operations such as put-away and picking; the TMS for routing and carrier management; and the inventory system for on-hand, in-transit and inbound stock. | EA1, EA2, EA3, EA6 |
+| Sales platform and order API | The platform through which customer orders are received and the API that transmits them to the operational systems. It is the main entry point of customer data. | EA3, EA4, EA6 |
+| Integration service (ETL/ELT, APIs) | Receives and validates records, checks required fields, standardizes units and dates, matches product and supplier identifiers, and flags duplicates, missing values and implausible quantities before the data is used by the models. | EA1, EA2, EA4, EA5, EA6, EA7 |
+| Operational database and data warehouse (data lake) | The operational database holds current orders and stock. The historical data store retains approved records for analytics and model training, with data lineage so that model inputs can be traced to their source. | EA1, EA2, EA4, EA5, EA6, EA7, EA8 |
+| AI services | Separate services for demand forecasting, inventory recommendations, anomaly detection, supplier risk estimation and delivery-time prediction, running in the live environment on new data. | EA1, EA2, EA4, EA5 |
+| Model registry and training pipeline | Records model versions, evaluation results, owners, approval status and deployment dates. Supports controlled training, validation, monitoring for drift, retraining and rollback to a validated version. | EA1, EA2, EA4, EA5, EA7 |
+| Dashboards and logging system | Role-specific dashboards (warehouse, procurement, logistics, management) that present recommendations and alerts, and the logs that record user activity, approvals and overrides. | EA2, EA3, EA4, EA5, EA8 |
+| IoT sensors, barcode scanners, warehouse terminals | Devices on shipping containers and in warehouses (sensors, RFID, GPS, barcode scanners) that report stock movements, locations and delivery events in real time. | EA2, EA3, EA4, EA5, EA6 |
+| Server, cloud and network infrastructure | Servers, cloud hosting, storage and network links that run all applications, databases and models, and connect the organization to its partners. | EA1 to EA8 (all) |
+| Privileged users | Administrators, data scientists, data owners and procurement staff with extended access rights to data, models and approval functions. | EA2, EA6, EA7, EA8 |
+| Suppliers, carriers and external sources | Supplier portals and the tracking systems of contracted carriers, plus external feeds such as market trends, weather and public holidays that provide inputs to the system. | EA1, EA3, EA5, EA6 |
  
 ---
  
@@ -134,7 +148,7 @@ The supporting-asset list includes technical systems, devices, users, and extern
  
 A Feared Event is a negative consequence for the organization resulting from compromise of an Essential Asset. The events below are associated with the CIA property affected.
  
-### 4.1 BE1 – Demand Forecasting
+### 4.1 EA1 – Demand Forecasting
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -143,9 +157,9 @@ A Feared Event is a negative consequence for the organization resulting from com
 | ER1.3 | Disclosure of historical sales and strategic data | Loss of competitive advantage. | C |
 | ER1.4 | Inability to identify the model version used to generate a forecast | Inability to reproduce, review, or explain a specific forecast and related decisions. | I |
  
-ER1.4 is limited to forecasting-model version traceability. General decision and activity traceability is addressed under BE8.
+ER1.4 is limited to forecasting-model version traceability. General decision and activity traceability is addressed under EA8.
  
-### 4.2 BE2 – Replenishment and Inventory Management
+### 4.2 EA2 – Replenishment and Inventory Management
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -156,7 +170,7 @@ ER1.4 is limited to forecasting-model version traceability. General decision and
  
 The case study includes safety-stock requirements in replenishment calculations. The detailed threshold-management process is not specified.
  
-### 4.3 BE3 – Order and Delivery Management
+### 4.3 EA3 – Order and Delivery Management
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -168,7 +182,7 @@ The case study includes safety-stock requirements in replenishment calculations.
  
 ER3.4 concerns the timeliness of the business delivery service and does not automatically indicate an IT system outage.
  
-### 4.4 BE4 – Anomaly Detection and Fraud Indicators
+### 4.4 EA4 – Anomaly and Fraud Detection
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -178,7 +192,7 @@ ER3.4 concerns the timeliness of the business delivery service and does not auto
  
 Anomaly alerts are signals for investigation and are not proof that fraud has occurred.
  
-### 4.5 BE5 – Supplier and Delivery Risk Assessment
+### 4.5 EA5 – Supplier and Delivery Risk Assessment
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -186,7 +200,7 @@ Anomaly alerts are signals for investigation and are not proof that fraud has oc
 | ER5.2 | Unavailability of the supplier and delivery risk assessment service | Decisions may be made without the expected risk information. | A |
 | ER5.3 | Disclosure of supplier contracts and commercial conditions | Loss of negotiating power and competitive advantage. | C |
  
-### 4.6 BE6 – Business and Historical Data
+### 4.6 EA6 – Business and Historical Data
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -197,7 +211,7 @@ Anomaly alerts are signals for investigation and are not proof that fraud has oc
  
 ER6.3 concerns access to the data-warehouse service; ER6.4 concerns permanent loss of underlying historical records.
  
-### 4.7 BE7 – AI Models and Training Data
+### 4.7 EA7 – AI Models and Training Data
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -208,7 +222,7 @@ ER6.3 concerns access to the data-warehouse service; ER6.4 concerns permanent lo
  
 ER7.4 is retained as a model-performance and operational concern. Its CIA classification requires an explicit project definition linking model-behaviour integrity to the classification used in this study.
  
-### 4.8 BE8 – Decision Traceability and Auditability
+### 4.8 EA8 – Decision Traceability and Auditability
  
 | ID | Feared Event | Business impact | CIA |
 |---|---|---|---|
@@ -234,4 +248,3 @@ The security baseline below lists the reference measures that apply to the AI-SC
 | ISO 27002, ISO 27090 (5.3) | Role-based access, least privilege, approval of high-impact actions |
  
 ---
- 
