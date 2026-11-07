@@ -1,17 +1,3 @@
-Claude
-
-
-
-
-
-
-
-
-
-
-
-
-03 draft final workshop 1 report · MD
 # EBIOS Risk Manager – Workshop 1 Report
 ## AI-Enabled Supply Chain Management Information System (AI-SCMIS)
  
