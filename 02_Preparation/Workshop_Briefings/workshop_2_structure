@@ -1,0 +1,32 @@
+|_Identify risk sources and target objectives (SR/OV pairs)
+  |_External supply-chain threat sources
+  |_Cybercriminal threat sources
+  |_AI-specific threat sources
+  |_Internal threat sources
+|_Evaluate and characterize SR/OV pairs
+  |_Evaluation criteria 
+  |_Evaluation grid and relevance scoring
+|_Select retained couples for downstream scenarios
+  |_Priority retained couples
+  |_Secondary couples 
+|_Map risk sources
+  |_Risk sources positioning matrix
+
+### Section Details:
+
+* **Identify risk sources and target objectives (SR/OV pairs):**  
+  Categorizes attackers around your specific architecture layers (IoT, ERP/WMS, AI pipeline, External APIs):
+  * *Unscrupulous Suppliers / Partners:* Manipulating lead times and risk scores to corner procurement orders
+  * *Direct Competitors:* Exfiltrating trained demand models, pricing weights, and regional customer order histories
+  * *Adversarial Scrapers & Hacktivists:* Querying inference endpoints to reverse-engineer algorithms or craft evasion inputs (ISO 27090 §6.3, §6.5)
+  * *Ransomware Syndicates:* Encrypting operational databases (ERP/WMS) to paralyze physical warehouse dispatch
+  * *Malicious Insiders (Data Scientists / Staff):* Poisoning training sets in the Data Lake or bypassing high-value order approval gates
+
+* **Evaluate and characterize SR/OV pairs:**  
+  Scores each pair using standard EBIOS-RM metrics calibrated for AI systems: **Motivation** (financial, espionage, disruption), **Resources** (budget, botnets, specialized ML adversarial expertise), and **Activity** (frequency of attacks against supply chain and AI APIs) to calculate global *Relevance*
+
+* **Select retained couples for downstream scenarios:**  
+  Filters the initial list down to **4 or 5 priority pairs** representing distinct threat profiles (Supply chain partner manipulation, Cybercrime/Ransomware, AI-specific evasion/poisoning, and Internal tampering) to carry forward into Workshops 3 and 4
+
+* **Map risk sources:**  
+  *  The **Risk Sources Positioning Matrix** (a scatter or bubble chart plotting *Attacker Resources* on the X-axis against *Threat Level / Motivation* on the Y-axis, with bubble size indicating *Activity Level*)
