@@ -1,9 +1,9 @@
-# Workshop 2: Criteria, Scoring, Selection and Map
-
-**Case study:** AI-SCMIS
+# Evaluation Criteria and Score Risk Sources
 **Input:** `Risk Sources and Target Objectives.md` (11 sources SR1 to SR11, 16 SR/OV couples)
-**Covers:** Task 3 (criteria), Task 4 (scoring grid), Task 5 (selection), Task 6 (map)
-
+**Section 3:** Evaluation Criteria 
+**Section 4:** Scoring grid
+**Section 5:** Selection of Retained SR/OV Couples
+**Section 6:** Map of Risk Sources
 ---
 
 ## 1. Evaluation Criteria
