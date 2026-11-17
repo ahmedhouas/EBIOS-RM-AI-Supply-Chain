@@ -3,12 +3,6 @@
 **Case study:** AI-SCMIS  
 **Covers:** Initial SR/OV inventory (risk sources identification, severity scale, SR/OV pairs), evaluation criteria, scoring grid and relevance, selection of retained SR/OV couples, attack families, excluded couples, and map of risk sources
 
-## Objective and Scope
-
-This document details the list of risk sources (SR) and their target objectives (OV). It relies on the information provided in Workshop 1: Essential Assets and Supporting Assets, the 31 Feared Events (ER) of the consolidated report, and the Dangerous Events (ED) which are retained as supporting information for Workshop 2. The SR/OV pairs are built by cross-referencing the Workshop 1 Feared Events with the internal and external risk sources. The following steps (evaluation, selection and mapping) rely on the SR/OV pairs identified here.
-
----
-
 ## 1. Initial SR/OV Inventory
 
 ### 1.1 Risk Sources Identification
