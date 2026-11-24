@@ -1,15 +1,15 @@
 # Workshop 4 – Operational Scenarios
-## Report Review and Recommendations
+## Report Review and Assessment
 
 ### 1. General Assessment
 
 The Workshop 4 report (*Operational Scenarios*) provides a solid foundation for the operational analysis of the AI-Enabled Supply Chain Management Information System (AI-SCMIS).
 
-The document demonstrates a structured approach to decomposing strategic scenarios into operational attack paths, identifying exploited vulnerabilities, describing attack sequences, and assessing their associated risk levels.
+The document demonstrates a structured approach to decomposing strategic scenarios into operational attack paths, identifying associated vulnerabilities, describing attack sequences, and assessing their corresponding risk levels.
 
 Overall, the report is well organized and contains the necessary elements to support the transition towards Workshop 5 (Risk Treatment).
 
-The review identifies several areas that could benefit from clarification, refinement, and presentation improvements. These recommendations are intended to improve the report's quality without unnecessarily modifying its established methodology or overall structure.
+This review evaluates the report across eight dimensions, highlighting its strengths and the areas requiring particular attention.
 
 ### 2. Assessment by Dimension
 
@@ -24,7 +24,7 @@ The review identifies several areas that could benefit from clarification, refin
 | Workshop traceability | Considered covered through connected reports |
 | Presentation | Good foundation, requires polishing |
 
-### 3. Detailed Observations and Recommendations
+### 3. Detailed Assessment
 
 #### 3.1 Structure and Organization
 
@@ -41,12 +41,7 @@ The report follows a logical and coherent progression:
 
 This organization provides a clear progression from the assessment methodology to the results and their interpretation.
 
-**Recommendations:**
-
-- Add an executive summary presenting the purpose, scope, principal findings, and overall results of Workshop 4.
-- Add a brief introduction explaining the objectives of the workshop and its relationship with the preceding analysis.
-- Improve the transition between the operational scenario analysis and the AI-specific threat mapping, if the latter section is retained.
-- Preserve the existing overall section structure.
+The overall structure is appropriate for a Workshop 4 deliverable and provides a suitable basis for presenting the operational risk analysis.
 
 #### 3.2 Scenario Coverage
 
@@ -54,19 +49,13 @@ This organization provides a clear progression from the assessment methodology t
 
 The report successfully develops 28 operational scenarios from the 14 strategic scenarios established previously.
 
-The use of two operational scenarios per strategic scenario provides a useful level of detail and helps illustrate different execution channels and attack possibilities.
+The use of two operational scenarios per strategic scenario provides a useful level of detail and illustrates different execution channels and attack possibilities.
 
 However, the number of scenarios alone does not guarantee complete coverage.
 
-Some scenarios represent different execution channels of the same underlying attack, rather than entirely independent attack paths.
+Some scenarios represent different execution channels of the same underlying attack rather than entirely independent attack paths.
 
-**Recommendations:**
-
-- Ensure that each operational scenario represents a sufficiently coherent attack sequence.
-- Review scenarios where different entry mechanisms are combined within the same attack path.
-- Distinguish between alternative execution channels and genuinely different operational attack paths.
-- Ensure that the vulnerabilities described are relevant to the specific attack being developed.
-- Maintain the relationship between each operational scenario and its corresponding strategic scenario.
+The coverage is therefore considered good, although the distinction between alternative execution channels and genuinely different operational attack paths deserves attention.
 
 #### 3.3 Technical Attack Descriptions
 
@@ -76,19 +65,11 @@ The four-stage attack-path structure (Know, Enter, Find, Exploit) provides a cle
 
 Nevertheless, some descriptions combine different attack mechanisms within the same operational scenario.
 
-For example, certain scenarios present exploitation of an unpatched service and the reuse of stolen credentials as alternative entry mechanisms.
+For example, certain scenarios present exploitation of an unpatched service and the reuse of stolen credentials as alternative entry mechanisms. These approaches may involve different prerequisites and attack conditions.
 
-These approaches may involve different prerequisites and attack conditions.
+Additionally, some vulnerability descriptions combine multiple weaknesses or missing security controls rather than identifying a single specific vulnerability.
 
-Additionally, some vulnerability descriptions combine multiple weaknesses or missing security controls.
-
-**Recommendations:**
-
-- Review attack paths that combine materially different entry mechanisms.
-- Ensure consistency between the described attack path and its associated vulnerability.
-- Distinguish vulnerabilities and weaknesses from the actions performed by the attacker.
-- Make sure each scenario describes a coherent progression from initial knowledge to exploitation.
-- Where multiple weaknesses are identified, make their respective contributions to the attack explicit.
+Despite these observations, the attack descriptions provide a good technical foundation for understanding the operational scenarios.
 
 #### 3.4 Scoring Methodology
 
@@ -106,14 +87,7 @@ The resulting vulnerability score is combined with the gravity level to establis
 
 The scoring methodology was established during the workshop and will be retained in its current form.
 
-**Recommendations:**
-
-- Preserve the established scoring criteria, weighting and calculation method.
-- Retain the current decision thresholds.
-- Ensure that the score breakdown remains consistent with the values presented in the operational scenario table.
-- Resolve any remaining documentation placeholders concerning the scoring assumptions.
-
-No methodological validation or recalibration of the scoring model is planned as part of this report revision.
+No methodological validation, recalibration or modification of the established scoring model is planned as part of this report revision.
 
 #### 3.5 Mathematical Calculations
 
@@ -128,13 +102,9 @@ The report identifies:
 - 14 scenarios classified as Reduce.
 - No scenarios classified as Accept or Neglect.
 
-The ranking is also consistent with the calculated assessment values.
+The ranking is also generally consistent with the calculated assessment values.
 
-**Recommendations:**
-
-- Preserve the existing calculations.
-- Ensure that values remain consistent across all tables and summaries.
-- Verify that the final conclusion accurately reflects the results presented in the report.
+The numerical results provide a clear overview of the relative prioritization of the identified scenarios.
 
 #### 3.6 AI Threat Mapping – ISO/IEC 27090
 
@@ -160,7 +130,7 @@ There are also cases where the likelihood assigned to an AI-specific threat corr
 
 4. **Validate AI threat classifications:** Ensure that the selected ISO/IEC 27090 threat categories accurately correspond to the described attack mechanisms.
 
-**Optionality of this section:**
+**Optionality of this section**
 
 The ISO/IEC 27090 mapping is an additional analytical component rather than an essential element of the operational scenario breakdown.
 
@@ -169,7 +139,7 @@ Consequently, the team may choose either to:
 - Retain and refine the section according to the recommendations above.
 - Remove the section entirely and keep Workshop 4 focused on operational scenario development and assessment.
 
-Removing this section would not invalidate the core operational scenario analysis, provided that the scenarios themselves adequately describe the relevant AI-related risks.
+Removing this section would not invalidate the core operational scenario analysis, provided that the operational scenarios themselves adequately describe the relevant risks.
 
 The decision should depend on the intended scope and level of detail of the final deliverable.
 
@@ -181,11 +151,7 @@ The Workshop 4 report is part of a consolidated risk assessment process and is i
 
 The relationship between strategic scenarios and operational scenarios is therefore established through the overall project documentation.
 
-**Recommendations:**
-
-- Preserve consistent scenario identifiers across the different workshop reports.
-- Maintain the same strategic scenario descriptions and gravity levels established in Workshop 3.
-- Ensure that the operational scenarios remain identifiable as refinements of the previously established strategic scenarios.
+The consistency of scenario identifiers, descriptions and associated gravity levels across the workshop reports provides the necessary continuity.
 
 No additional standalone traceability section is considered necessary, provided that the reports remain connected and the references between them are clear.
 
@@ -193,39 +159,22 @@ No additional standalone traceability section is considered necessary, provided 
 
 **Assessment: Good foundation, requires polishing**
 
-The report has a clear structure and contains substantial technical information. However, several presentation improvements would make it more suitable as a formal project deliverable.
+The report has a clear structure and contains substantial technical information.
 
-**Recommendations:**
+Its presentation provides a good foundation for a formal project deliverable, although some documentation and formatting aspects could be improved.
 
-- Add numbered captions to all tables.
-- Introduce a consistent terminology and abbreviations section.
-- Standardize technical terminology and remove any remaining untranslated expressions.
-- Add a references section for the standards and methodological documents actually used.
-- Improve the readability of wide tables and ensure consistent formatting.
-- Remove unresolved drafting notes and placeholders before final submission.
+The main observations concern table presentation, terminology consistency, references and overall document formatting.
 
-### 4. Prioritized Revision Plan
-
-| Priority | Revision | Expected result |
-|---|---|---|
-| 1 | Review operational attack descriptions | More coherent and consistent scenarios |
-| 2 | Review scenario vulnerabilities and their descriptions | Clearer relationship between weaknesses and attack paths |
-| 3 | Decide whether to retain the ISO/IEC 27090 mapping | A clear and justified scope for the report |
-| 4 | If retained, refine the AI threat mapping | Improved technical accuracy and traceability |
-| 5 | Finalize presentation and documentation | Professional and consistent deliverable |
-
-The established scoring methodology and its calculations are to be preserved during these revisions.
-
-### 5. Conclusion
+### 4. Overall Conclusion
 
 The Workshop 4 report represents a solid and sufficiently developed foundation for the operational analysis of the AI-SCMIS risk assessment.
 
 Its principal strengths are the structured decomposition of strategic scenarios, the detailed operational attack paths, the vulnerability assessment and the consolidated scenario ranking.
 
-The proposed revisions focus primarily on improving the coherence of attack descriptions, clarifying the relationship between vulnerabilities and exploitation mechanisms, and refining the presentation of the final document.
+The main areas requiring attention concern the consistency of certain technical attack descriptions, the presentation of vulnerabilities and the refinement of the document's overall presentation.
 
-The ISO/IEC 27090 mapping should be treated as an optional extension, with the possibility of retaining it after refinement or removing it to maintain a more focused operational analysis.
+The ISO/IEC 27090 mapping remains an optional extension that may either be refined or removed depending on the team's decision.
 
 The established scoring methodology and the relationship with previous workshop reports will remain unchanged.
 
-Following these adjustments, the report should provide a suitable and coherent basis for Workshop 5, where the identified risks will be addressed through the selection of security measures, treatment strategies, responsibilities and residual risk assessment.
+Overall, the report provides a suitable basis for Workshop 5, where the identified risks will be addressed through the selection of security measures, treatment strategies, responsibilities and residual risk assessment.
